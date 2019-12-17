@@ -1,5 +1,10 @@
 <template>
-  <custom-input v-model="value" />
+  <div>
+    <custom-input v-model="value" />
+    <v-btn @click="showValue">
+      Ok
+    </v-btn>
+  </div>
 </template>
 
 <script>
@@ -8,7 +13,17 @@ export default {
   components: { CustomInput },
   data () {
     return {
-      value: ''
+      value: 'hello'
+    }
+  },
+  watch: {
+    value (val) {
+      console.log('value' + val)
+    }
+  },
+  methods: {
+    showValue () {
+      console.log('value is: ' + this.value)
     }
   }
 }
