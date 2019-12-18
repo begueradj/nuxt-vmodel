@@ -1,7 +1,7 @@
 <template>
   <v-text-field
     v-bind:value="value"
-    v-on:input="$emit('input', value)"
+    v-on:input="$emit('input', $event)"
   />
 </template>
 
@@ -13,13 +13,13 @@ export default {
       type: String,
       required: true
     }
-  },
-  watch: {
+  }
+  /* watch: {
     value () {
       this.$emit('input', this.value)
       console.log(this.value)
       console.log('Hello')
     }
-  }
+  } */
 }
 </script>

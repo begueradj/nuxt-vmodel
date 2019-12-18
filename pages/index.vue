@@ -1,7 +1,7 @@
 <template>
   <div>
     <custom-input v-model="value" />
-    <v-btn @click="showValue">
+    <v-btn @click="onClickChild">
       Ok
     </v-btn>
   </div>
@@ -16,14 +16,17 @@ export default {
       value: 'hello'
     }
   },
-  watch: {
+  /* watch: {
     value (val) {
-      console.log('value' + val)
+      console.log('value: ' + val)
     }
-  },
+  }, */
   methods: {
     showValue () {
       console.log('value is: ' + this.value)
+    },
+    onClickChild () {
+      console.log(this.value) // someValue
     }
   }
 }
