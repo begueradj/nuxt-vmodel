@@ -1,6 +1,6 @@
 <template>
   <v-text-field
-    v-bind:value="value"
+    v-bind:value="ok"
     v-on:input="$emit('input', $event)"
   />
 </template>
@@ -8,9 +8,14 @@
 <script>
 export default {
   name: 'CustomInput',
+  model: {
+    prop: 'ok',
+    event: 'input'
+  },
   props: {
-    value: {
+    ok: {
       type: String,
+      default: '',
       required: true
     }
   }
