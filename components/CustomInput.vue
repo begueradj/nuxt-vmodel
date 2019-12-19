@@ -15,8 +15,7 @@ export default {
   props: {
     ok: {
       type: String,
-      default: '',
-      required: true
+      default: ''
     }
   }
   /* watch: {
